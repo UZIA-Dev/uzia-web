@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./styles/_application.scss";
+import "../styles/_application.scss";
 import { Geist, Geist_Mono } from "next/font/google";
 import NextConfig from "../../next.config";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
