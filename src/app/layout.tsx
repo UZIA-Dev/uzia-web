@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import "./styles/_application.scss";
 import { Geist, Geist_Mono } from "next/font/google";
 import NextConfig from "../../next.config";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { Roboto } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
-import AppBar from './_components/CustomAppBar';
+import AppBar from '../components/CustomAppBar';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -39,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable}`}>
+      <body className={`${roboto.variable}`}>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
             <AppBar />
