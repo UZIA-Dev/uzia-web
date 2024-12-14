@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NextConfig from "../../next.config" // 追加
+
+const basePath = NextConfig.basePath;
+process.env.BASE_PATH = basePath ? basePath : "";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
