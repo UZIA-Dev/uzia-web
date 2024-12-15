@@ -68,7 +68,7 @@ const MobileAppBarMenuBox = (props: MobileAppBarMenuBoxProps) => {
         onClick={onOpen}
         color="inherit"
       >
-        <MenuIcon fontSize="large"/>
+        <MenuIcon fontSize="large" />
       </IconButton>
       <Dialog
         open={isMenuOpen}
