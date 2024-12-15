@@ -17,56 +17,9 @@ import Link from '@mui/material/Link';
 import getBasePath from '../../utils/getBasePath';
 import LogoIcon from './parts/LogoIcon';
 
+import MobileAppBarMenuBox from './parts/MobileAppBarMenuBox';
+
 const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
-
-type MobileAppBarMenuBoxProps = {
-  onOpen: (e: React.MouseEvent<HTMLElement>) => void;
-  onClose: () => void;
-  isMenuOpen: boolean;
-}
-
-/**
- * モバイル用メニュー
- */
-const MobileAppBarMenuBox = (props: MobileAppBarMenuBoxProps) => {
-  const { onOpen, onClose, isMenuOpen } = props;
-  return (
-    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-      <IconButton
-        size="large"
-        aria-label="account of current user"
-        aria-controls="menu-appbar"
-        aria-haspopup="true"
-        onClick={onOpen}
-        color="inherit"
-      >
-        <MenuIcon />
-      </IconButton>
-      <Menu
-        id="menu-appbar"
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-        keepMounted
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        open={true}
-        onClose={onClose}
-        sx={{ display: { xs: 'block', md: 'none' } }}
-      >
-        {pages.map((page) => (
-          <MenuItem key={page} onClick={onClose}>
-            <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
-          </MenuItem>
-        ))}
-      </Menu>
-    </Box>
-  );
-};
 
 function CustomAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -84,7 +37,12 @@ function CustomAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{}}>
           <LogoIcon href="/" />
-          <MobileAppBarMenuBox onOpen={handleOpenNavMenu} onClose={handleCloseNavMenu} isMenuOpen={Boolean(anchorElNav)} />
+          <MobileAppBarMenuBox
+            menuItems={pages}
+            onOpen={handleOpenNavMenu}
+            onClose={handleCloseNavMenu}
+            isMenuOpen={Boolean(anchorElNav)}
+          />
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
