@@ -9,7 +9,7 @@ import Button from '@mui/material/Button';
 import LogoIcon from './parts/LogoIcon';
 import MobileAppBarMenuBox from './parts/MobileAppBarMenuBox';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['NEWS', 'ABOUT', 'PRODUCTS', 'BLOG', 'CONTACT'];
 
 function CustomAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
