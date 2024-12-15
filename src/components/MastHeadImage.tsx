@@ -9,7 +9,6 @@ type MastHeadImageProps = {
 
 const MastHeadImage = (props: MastHeadImageProps) => {
   const { src, className, children } = props;
-  console.log({ src })
   return (
     <Paper className={`masthead-container ${className}`}>
       <img src={src} />
