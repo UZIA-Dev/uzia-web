@@ -3,6 +3,30 @@ body {
   padding: 0;
 }
 
+/* AppBar */
+.app-bar-contener {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(#000000ac, #9198e500);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: none;
+  max-height: 120px;
+  padding: 1.5rem 1rem;
+
+  .logo-icon-conteiner {
+    width: 10rem;
+    height: 5rem;
+    background-image: url("../../public/img/uzia_logo_white.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0.5rem 1rem 0.5rem 0;
+  }
+}
+
 /* マストヘッド */
 .masthead-container {
   width: 100%;
