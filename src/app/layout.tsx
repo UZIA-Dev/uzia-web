@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../styles/_application.scss";
+import "../styles/_styles.scss";
 import NextConfig from "../../next.config";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { Roboto } from 'next/font/google';

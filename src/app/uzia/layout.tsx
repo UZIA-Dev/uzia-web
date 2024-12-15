@@ -7,9 +7,9 @@ type UziaLayoutProps = {
 const UziaLayout = (props: Readonly<UziaLayoutProps>) => {
   const { children } = props;
   return (
-    <React.Fragment>
+    <div className="uzui-root">
       {children}
-    </React.Fragment>
+    </div>
   );
 }
 

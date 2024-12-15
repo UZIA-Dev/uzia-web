@@ -1,0 +1,9 @@
+$main-font-color: #000;
+
+$container-title-font-size: 46;
+
+@mixin container-title {
+  font-size: $container-title-font-size;
+  font-weight: 700;
+  text-align: center;
+}

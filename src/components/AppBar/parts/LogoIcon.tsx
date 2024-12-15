@@ -12,7 +12,7 @@ const LogoIcon = (props: LogoIconProps) => {
   const { href = "/", className } = props;
   return (
     <Box sx={{ display: { xs: 'flex' }, mr: 1, flexDirection: "row", alignItems: "center" }}>
-      <Link className={`logo-icon-conteiner ${className}`} href={href} underline="none" />
+      <Link className={`logo-icon-container ${className}`} href={href} underline="none" />
       <Typography noWrap variant="subtitle2" sx={{ fontWeight: 100 }}>OFFICIAL WEBSITE</Typography>
     </Box>
   );
