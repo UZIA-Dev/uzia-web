@@ -1,13 +1,17 @@
 import React from 'react';
 import Paper from '@mui/material/Paper';
-import getBasePath from '../utils/getBasePath';
 
-const MastHeadImage = () => {
+type MastHeadImageProps = {
+  src: string;
+  className?: string;
+}
+
+const MastHeadImage = (props: MastHeadImageProps) => {
+  const { src, className } = props;
+  console.log({ src })
   return (
-    <Paper className="masthead-container">
-      <img
-        src={`${getBasePath()}/img/image_1.jpg`}
-      />
+    <Paper className={`masthead-container ${className}`}>
+      <img src={src} />
     </Paper>
   );
 }
