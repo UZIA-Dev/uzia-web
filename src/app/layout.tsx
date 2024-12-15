@@ -20,6 +20,9 @@ process.env.BASE_PATH = basePath ? basePath : "";
 export const metadata: Metadata = {
   title: "UZIA OFFICIAL SITE",
   description: "同人ゲーム開発サークル「UZIA」のオフィシャルサイトです。",
+  robots: {
+    index: false
+  }
 };
 
 export default function RootLayout({
