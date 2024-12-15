@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "../styles/_application.scss";
-import { Geist, Geist_Mono } from "next/font/google";
 import NextConfig from "../../next.config";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { Roboto } from 'next/font/google';
@@ -17,16 +16,6 @@ const roboto = Roboto({
 
 const basePath = NextConfig.basePath;
 process.env.BASE_PATH = basePath ? basePath : "";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
