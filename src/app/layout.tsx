@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
+import "../styles/_application.scss";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import NextConfig from "../../next.config" // 追加
+import NextConfig from "../../next.config";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { Roboto } from 'next/font/google';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
+import AppBar from '../components/AppBar/CustomAppBar';
+
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto',
+});
 
 const basePath = NextConfig.basePath;
 process.env.BASE_PATH = basePath ? basePath : "";
@@ -28,8 +40,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body className={`${roboto.variable}`}>
+        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+          <ThemeProvider theme={theme}>
+            <AppBar />
+            {children}
+          </ThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
