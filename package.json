@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css}'",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@emotion/cache": "^11.14.0",
@@ -16,8 +19,14 @@
     "@mui/material": "^6.2.0",
     "@mui/material-nextjs": "^6.2.0",
     "@types/lodash": "^4.17.13",
+    "@types/prettier": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
     "lodash": "^4.17.21",
     "next": "15.1.0",
+    "prettier": "^3.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass-embedded": "^1.83.0"
@@ -31,5 +40,12 @@
     "eslint-config-next": "15.1.0",
     "sass": "^1.83.0",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run lint",
+      "npm run format",
+      "npm run lint:fix"
+    ]
   }
 }
