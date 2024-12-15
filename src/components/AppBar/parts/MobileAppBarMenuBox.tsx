@@ -24,13 +24,11 @@ type MobileAppBarMenuBoxProps = {
 
 type MobileAppBarMenuProps = {
   menuItems: string[];
-  onClose: () => void;
-  isMenuOpen: boolean;
 }
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & {
-    children: React.ReactElement<any, any>;
+    children: React.ReactElement;
   },
   ref: React.Ref<unknown>,
 ) {
@@ -38,7 +36,7 @@ const Transition = React.forwardRef(function Transition(
 });
 
 const MobileAppBarMenu = (props: MobileAppBarMenuProps) => {
-  const { menuItems, onClose } = props;
+  const { menuItems } = props;
 
   return (
     <List>
