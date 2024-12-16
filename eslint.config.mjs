@@ -18,7 +18,7 @@ const eslintConfig = [
   ),
   {
     rules: {
-      "@next/next/no-img-element": "ignore"
+      "@next/next/no-img-element": 0
     }
   }
 ];
