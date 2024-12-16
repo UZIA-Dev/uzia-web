@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -21,12 +22,14 @@ const NewsListItem = (props: NewsListItemProps) => {
   const { item } = props;
   return (
     <ListItem>
-      <ListItemAvatar>
-        <Avatar>
-          <CampaignRoundedIcon />
-        </Avatar>
-      </ListItemAvatar>
-      <ListItemText primary={item.title} secondary={item.date} />
+      <Button color='inherit'>
+        <ListItemAvatar>
+          <Avatar>
+            <CampaignRoundedIcon />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary={item.title} secondary={item.date} />
+      </Button>
     </ListItem>
   );
 }
