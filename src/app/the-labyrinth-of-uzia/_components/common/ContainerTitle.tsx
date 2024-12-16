@@ -11,7 +11,7 @@ const ContainerTitle = (props: ContainerTitleProps) => {
 
   return (
     <Divider className="uzui-container-title-divider" component="div" role="presentation" textAlign="left" aria-hidden="true">
-      <Typography variant='h2' className="container-title">{titleText}</Typography>
+      <Typography variant='h2' className="container-title" sx={{ fontSize: { }}}>{titleText}</Typography>
     </Divider>
   );
 }

@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import "../styles/_styles.scss";
 import NextConfig from "../../next.config";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { Roboto } from 'next/font/google';
+import { Noto_Sans_JP } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 import AppBar from '../components/AppBar/CustomAppBar';
 
-const roboto = Roboto({
+const notoSansJp = Noto_Sans_JP({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-roboto',
+  variable: '--font-noto-sans',
 });
 
 const basePath = NextConfig.basePath;
@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${roboto.variable}`}>
+      <body className={`${notoSansJp.variable}`}>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme}>
             <AppBar />
