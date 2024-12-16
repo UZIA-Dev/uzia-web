@@ -4,9 +4,9 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import getImageSrcPath from '../../utils/getImageSrcPath';
-import UziaNews from './_components/UziaNews';
+import UziaWhatsNew from './_components/UziaWhatsNew';
+import UziaStaff from './_components/UziaStaff';
 import UziaStory from './_components/UziaStory';
-import UziaGameSystem from './_components/UziaGameSystem';
 
 const UziaPage = () => {
   return (
@@ -17,9 +17,9 @@ const UziaPage = () => {
         </Container>
       </MastHeadImage>
       <Container maxWidth="md">
-        <UziaNews />
         <UziaStory />
-        <UziaGameSystem />
+        <UziaWhatsNew />
+        <UziaStaff />
       </Container>
     </Paper>
   );

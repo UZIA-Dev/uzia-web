@@ -7,4 +7,8 @@ $container-title-font-size: 46;
   font-size: $container-title-font-size;
   font-weight: 400;
   text-align: left;
+
+  @media (max-width: 900px) {
+    font-size: 32;
+  }
 }
