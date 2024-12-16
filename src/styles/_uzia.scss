@@ -1,5 +1,7 @@
 @use "./variables" as *;
 
+$uzui-nav-menu-border-color: #cccccc;
+
 .uzui-root {
   background-color: $main-bg-color;
 
@@ -24,8 +26,19 @@
     }
   }
 
+  /* nav */
+  .uzui-nav-bar-container {
+    .uzui-nav-bar-item-grid {
+      border-bottom: 1px solid $uzui-nav-menu-border-color;
+    }
+  }
+
   /* トップコンテンツ コンテナ */
   .uzui-content-container {
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+
     .uzui-container-title-divider {
       margin-bottom: 1rem;
     }
