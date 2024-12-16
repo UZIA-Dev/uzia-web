@@ -10,7 +10,7 @@ const ContainerTitle = (props: ContainerTitleProps) => {
   const { titleText } = props;
 
   return (
-    <Divider component="div" role="presentation" textAlign="left" aria-hidden="true">
+    <Divider className="uzui-container-title-divider" component="div" role="presentation" textAlign="left" aria-hidden="true">
       <Typography variant='h2' className="container-title">{titleText}</Typography>
     </Divider>
   );

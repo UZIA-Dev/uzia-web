@@ -8,7 +8,7 @@ import ContainerTitle from './common/ContainerTitle';
 const UziaStory = () => {
   return (
     <Box className="uzui-content-container">
-      <ContainerTitle titleText="ストーリー" />
+      <ContainerTitle titleText="ゲームシステム" />
       <Typography variant="body1" sx={{ whiteSpace: "pre-wrap", textAlign: "left" }}>{story.introduction}</Typography>
     </Box>
   );

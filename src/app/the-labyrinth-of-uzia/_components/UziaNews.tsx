@@ -8,7 +8,7 @@ import NewsItem from './news/NewsItem';
 
 const UziaNews = () => {
   return (
-    <Box className="uzui-content-container" sx={{ flexGrow: 1 }}>
+    <Box className="uzui-content-container">
       <ContainerTitle titleText="ニュース" />
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 6, sm: 6, md: 12 }} sx={{ mt: 2 }}>
         {Array.from(Array(12)).map((_, index) => (

@@ -6,6 +6,7 @@ import Container from '@mui/material/Container';
 import getImageSrcPath from '../../utils/getImageSrcPath';
 import UziaNews from './_components/UziaNews';
 import UziaStory from './_components/UziaStory';
+import UziaGameSystem from './_components/UziaGameSystem';
 
 const UziaPage = () => {
   return (
@@ -15,9 +16,10 @@ const UziaPage = () => {
           <Typography variant='h2'>YYYY/MM/DD 正式版リリース決定！</Typography>
         </Container>
       </MastHeadImage>
-      <Container>
+      <Container maxWidth="md">
         <UziaNews />
         <UziaStory />
+        <UziaGameSystem />
       </Container>
     </Paper>
   );
