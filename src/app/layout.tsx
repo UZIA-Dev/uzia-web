@@ -18,7 +18,7 @@ const basePath = NextConfig.basePath;
 process.env.BASE_PATH = basePath ? basePath : "";
 
 export const metadata: Metadata = {
-  title: "UZIA OFFICIAL SITE",
+  title: "ユーザイア OFFICIAL SITE",
   description: "同人ゲーム開発サークル「UZIA」のオフィシャルサイトです。",
   robots: {
     index: false
