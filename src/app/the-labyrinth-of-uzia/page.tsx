@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import getImageSrcPath from '../../utils/getImageSrcPath';
 import UziaNews from './_components/UziaNews';
-import UziaAbout from './_components/UziaAbout';
+import UziaStory from './_components/UziaStory';
 
 const UziaPage = () => {
   return (
@@ -17,7 +17,7 @@ const UziaPage = () => {
       </MastHeadImage>
       <Container>
         <UziaNews />
-        <UziaAbout />
+        <UziaStory />
       </Container>
     </Paper>
   );

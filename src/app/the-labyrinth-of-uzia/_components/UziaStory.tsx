@@ -3,14 +3,15 @@ import React from "react";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Introduction from './about/introduction.json';
+import ContainerTitle from './common/ContainerTitle';
 
-const UziaAbout = () => {
+const UziaStory = () => {
   return (
     <Box className="uzui-content-container" sx={{ flexGrow: 1 }}>
-      <Typography variant='h2' className="container-title">「ユーザイアの迷宮」について</Typography>
+      <ContainerTitle titleText="ストーリー" />
       <Typography variant="body1" sx={{ whiteSpace: "pre-wrap", textAlign: "center" }}>{Introduction.introduction}</Typography>
     </Box>
   );
 }
 
-export default UziaAbout;
+export default UziaStory;
