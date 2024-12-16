@@ -1,57 +1,62 @@
 @use "./variables" as *;
 
-$uzui-nav-menu-border-color: #cccccc;
+$uzui-nav-menu-border-color: #e2e2e2;
 
 .uzui-root {
+  min-height: 100vh;
   background-color: $main-bg-color;
 
-  .uzui-masthead-contents {
-    position: relative;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+  .uzui-mainpage-container {
+    padding-bottom: 5rem;
 
-    >h2 {
-      position: absolute;
-      bottom: 1rem;
-      font-weight: 700;
-      color: white;
-      text-shadow: 3px 3px 10px #000000;
+    .uzui-masthead-contents {
+      position: relative;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
 
-      @media (max-width: 900px) {
-        font-size: 32;
+      >h2 {
+        position: absolute;
+        bottom: 1rem;
+        font-weight: 700;
+        color: white;
+        text-shadow: 3px 3px 10px #000000;
+
+        @media (max-width: 900px) {
+          font-size: 32;
+        }
       }
     }
-  }
 
-  /* nav */
-  .uzui-nav-bar-container {
-    .uzui-nav-bar-item-grid {
-      border-bottom: 1px solid $uzui-nav-menu-border-color;
-    }
-  }
-
-  /* トップコンテンツ コンテナ */
-  .uzui-content-container {
-    &:not(:first-child) {
-      margin-top: 2rem;
+    /* nav */
+    .uzui-nav-bar-container {
+      .uzui-nav-bar-item-grid {
+        border-bottom: 1px solid $uzui-nav-menu-border-color;
+      }
     }
 
-    .uzui-container-title-divider {
-      margin-bottom: 1rem;
+    /* トップコンテンツ コンテナ */
+    .uzui-content-container {
+      &:not(:first-child) {
+        margin-top: 2rem;
+      }
+
+      .uzui-container-title-divider {
+        margin-bottom: 1rem;
+      }
+
+      /* スタッフアイコン */
+      .uzui-staff-item-container {}
     }
 
-    /* スタッフアイコン */
-    .uzui-staff-item-container {}
-  }
+    /* ニュースグリッド */
+    .uzui-news-grid-container {
+      flex-grow: 1;
+      padding: 2rem;
 
-  /* ニュースグリッド */
-  .uzui-news-grid-container {
-    flex-grow: 1;
-    padding: 2rem;
-
-    .uzui-news-grid-parent {}
+      .uzui-news-grid-parent {}
+    }
   }
 }

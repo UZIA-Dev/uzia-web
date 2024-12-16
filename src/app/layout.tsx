@@ -6,6 +6,7 @@ import { Noto_Sans_JP } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 import AppBar from '../components/AppBar/CustomAppBar';
+import CommonFooter from "@/components/CommonFooter";
 
 const notoSansJp = Noto_Sans_JP({
   weight: ['300', '400', '500', '700'],
@@ -37,6 +38,7 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <AppBar />
             {children}
+            <CommonFooter />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
