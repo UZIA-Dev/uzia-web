@@ -16,6 +16,11 @@ const eslintConfig = [
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ),
+  {
+    rules: {
+      "@next/next/no-img-element": 0
+    }
+  }
 ];
 
 export default eslintConfig;

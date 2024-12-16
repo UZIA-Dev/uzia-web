@@ -1,6 +1,8 @@
-@use "./variables";
+@use "./variables" as *;
 
 .uzui-root {
+  background-color: $main-bg-color;
+
   .uzui-masthead-contents {
     position: relative;
     text-align: center;
@@ -15,6 +17,28 @@
       font-weight: 700;
       color: white;
       text-shadow: 3px 3px 10px #000000;
+
+      @media (max-width: 900px) {
+        font-size: 32;
+      }
     }
+  }
+
+  /* トップコンテンツ コンテナ */
+  .uzui-content-container {
+    .uzui-container-title-divider {
+      margin-bottom: 1rem;
+    }
+
+    /* スタッフアイコン */
+    .uzui-staff-item-container {}
+  }
+
+  /* ニュースグリッド */
+  .uzui-news-grid-container {
+    flex-grow: 1;
+    padding: 2rem;
+
+    .uzui-news-grid-parent {}
   }
 }

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "紅炎",
+    "subname": "Kohen",
+    "role": "企画・プロデューサー・ゲームデザイン・シナリオ・グラフィック"
+  },
+  {
+    "name": "Show",
+    "role": "プログラマー・キャラクターデザイン・グラフィック・ボイス全般"
+  },
+  {
+    "name": "ラリマヤ",
+    "subname": "Rarimaya",
+    "role": "プログラム・UIデザイン"
+  },
+  {
+    "name": "ちきし",
+    "subname": "tikisi",
+    "role": "プログラム・ボイス"
+  },
+  {
+    "name": "やす",
+    "subname": "Yasu",
+    "role": "モンスターデザイン・背景デザイン"
+  },
+  {
+    "name": "かがみ(PandD)",
+    "role": "グラフィック"
+  },
+  {
+    "name": "Sigma(PandD)",
+    "role": "グラフィック(日進月歩)"
+  },
+  {
+    "name": "Kumampet",
+    "role": "音全般"
+  }
+]
