@@ -36,7 +36,7 @@ const NewsListItem = (props: NewsListItemProps) => {
 
 export default function FolderList() {
   return (
-    <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%' }}>
       {DUMMY_DATA.map((item, index) => {
         return <NewsListItem item={item} key={`${item.title}-${index}`} />
       })}

@@ -1,4 +1,4 @@
-@use "./variables" as var;
+@use "./variables" as *;
 
 body {
   margin: 0;
@@ -81,5 +81,20 @@ body {
 
 /* 各コンテンツのタイトル */
 .container-title {
-  @include var.container-title;
+  @include container-title;
+}
+
+/* Footer */
+footer {
+  margin: 0;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  background-color: $common-footer-bg-color;
+
+  .footer-container {
+
+    img {
+      width: 7rem;
+    }
+  }
 }

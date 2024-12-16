@@ -1,6 +1,6 @@
 import React from 'react';
 import MastHeadImage from '@/components/MastHeadImage';
-import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import getImageSrcPath from '../../utils/getImageSrcPath';
@@ -11,7 +11,7 @@ import UziaNavBar from './_components/UziaNavBar';
 
 const UziaPage = () => {
   return (
-    <Paper>
+    <Box className="uzui-mainpage-container">
       <MastHeadImage src={getImageSrcPath('/img/town.png')}>
         <Container className="uzui-masthead-contents">
           <Typography variant='h2'>YYYY/MM/DD 正式版リリース決定！</Typography>
@@ -23,7 +23,7 @@ const UziaPage = () => {
         <UziaWhatsNew />
         <UziaStaff />
       </Container>
-    </Paper>
+    </Box>
   );
 }
 
