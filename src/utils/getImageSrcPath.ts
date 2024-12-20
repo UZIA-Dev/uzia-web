@@ -7,7 +7,6 @@ import _first from "lodash/first";
  * @returns 
  */
 const getImageSrcPath = (src: string) => {
-  console.log(_first(src))
   if (_first(src) !== '/') {
     src = '/' + src;
   }
