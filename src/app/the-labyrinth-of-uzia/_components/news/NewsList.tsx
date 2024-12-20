@@ -22,7 +22,7 @@ const NewsListItem = (props: NewsListItemProps) => {
   const { item } = props;
   return (
     <ListItem>
-      <Button color='inherit'>
+      <Button color='inherit' sx={{ textAlign: "left" }}>
         <ListItemAvatar>
           <Avatar>
             <CampaignRoundedIcon />
