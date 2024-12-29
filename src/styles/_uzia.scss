@@ -7,6 +7,17 @@ $uzui-nav-menu-white-text-color: #e0e0e0;
   min-height: 100vh;
   background-color: $main-bg-color;
 
+  /* nav */
+  .uzui-nav-bar-container {
+    .uzui-nav-bar-item-grid {
+      border-bottom: 1px solid $uzui-nav-menu-border-color;
+
+      .uzui-nav-bar-item-button {
+        color: #000000;
+      }
+    }
+  }
+
   .uzui-mainpage-container {
     padding-bottom: 5rem;
 
@@ -28,13 +39,6 @@ $uzui-nav-menu-white-text-color: #e0e0e0;
         @media (max-width: 900px) {
           font-size: 32;
         }
-      }
-    }
-
-    /* nav */
-    .uzui-nav-bar-container {
-      .uzui-nav-bar-item-grid {
-        border-bottom: 1px solid $uzui-nav-menu-border-color;
       }
     }
 
@@ -61,6 +65,7 @@ $uzui-nav-menu-white-text-color: #e0e0e0;
     }
   }
 
+  /* サブページスタイル */
   .uzia-subpage-layout-container {
     .uzui-subpage-header-container {
       width: 100%;

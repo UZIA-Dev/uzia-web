@@ -20,7 +20,7 @@ const UziaNavItems = () => {
     return (
       <Grid className="uzui-nav-bar-item-grid" key={`${menuName}-${index}`} size={{ xs: 6, sm: 3 }} textAlign="center" borderBottom="1px solid">
         <Link href={`${pathname}/${menuName}`}>
-          <Button startIcon={<KeyboardDoubleArrowRightIcon />} color='inherit' sx={{ width: "100%" }}>
+          <Button className="uzui-nav-bar-item-button" startIcon={<KeyboardDoubleArrowRightIcon />} color='inherit' sx={{ width: "100%" }}>
             <Typography variant='h4' component="span" fontWeight={300} fontSize={20}>{_upperCase(menuName)}</Typography>
           </Button>
         </Link>

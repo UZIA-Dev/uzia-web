@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import getImageSrcPath from "@/utils/getImageSrcPath";
 import SubPageHeader from "./_components/SubPageHeader";
 import { getRoutePath2PathName } from "../../../utils/getRoutePath2PathName";
+import UziaNavBar from "../_components/UziaNavBar";
 
 type UziaSubPageLayoutProps = {
   children?: React.ReactNode;
@@ -16,6 +17,7 @@ const UziaSubPageLayout = (props: Readonly<UziaSubPageLayoutProps>) => {
     <React.Fragment>
       <div className="uzia-subpage-layout-container">
         <SubPageHeader backgroundImageSource={getImageSrcPath("/img/town.png")} title={label} />
+        <UziaNavBar />
         {props.children}
       </div>
     </React.Fragment>
