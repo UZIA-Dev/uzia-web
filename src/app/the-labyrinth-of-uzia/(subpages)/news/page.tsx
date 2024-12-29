@@ -1,12 +1,10 @@
 import React from "react";
-import CustomBreadcrumb from "../../../../components/CustomBreadcrumb";
 
 
 const UziaNewsPage = () => {
   return (
     <div>
-      <h2>News</h2>
-      <CustomBreadcrumb />
+      {/* <h2>News</h2> */}
       {/* News List */}
     </div>
   );

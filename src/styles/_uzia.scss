@@ -1,6 +1,7 @@
 @use "./variables" as *;
 
-$uzui-nav-menu-border-color: #e2e2e2;
+$uzui-nav-menu-border-color: #EEEEEE;
+$uzui-nav-menu-white-text-color: #e0e0e0;
 
 .uzui-root {
   min-height: 100vh;
@@ -65,16 +66,60 @@ $uzui-nav-menu-border-color: #e2e2e2;
       width: 100%;
       height: 30vh;
       display: block;
+      position: relative;
+      box-sizing: border-box;
 
-      >img {
+      .uzui-subpage-header-bg-image {
         width: 100%;
-        object-fit: cover;
         height: 100%;
+
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.7;
+          background-color: dimgrey;
+        }
       }
 
-      .uzui-subpage-header-title {
+      .uzui-subpage-header-title-container {
         position: absolute;
-        
+        bottom: 0;
+        padding-bottom: 0.5rem;
+
+        >div:first-child {
+          margin-bottom: 0.5rem;
+        }
+
+        .uzui-subpage-header-title {
+          font-size: 1.8rem;
+          display: inline;
+          border-bottom: 1px solid #EEEEEE;
+          color: $uzui-nav-menu-white-text-color;
+          font-weight: 400;
+        }
+
+        .breadcrumb {
+          color: #000000;
+          list-style: none;
+          line-height: 0.7rem;
+
+          .breadcrumb-link {
+            font-size: 0.7rem;
+            line-height: 0.7rem;
+            font-weight: 100;
+          }
+
+          li>svg {
+            width: 0.7em;
+            height: 0.7em;
+            color: $uzui-nav-menu-white-text-color;
+          }
+        }
       }
     }
   }

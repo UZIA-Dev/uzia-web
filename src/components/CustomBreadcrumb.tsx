@@ -6,7 +6,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { usePathname } from "next/navigation";
 import _split from "lodash/split";
 import _map from "lodash/map";
-import { pageNameMap } from "../utils/breadcrumbMasterData";
+import { pageNameMap } from "../utils/pagePathMasterData";
 
 const getPathNameMapping = (path: string) => {
   // 動的ルートと静的ルートの区別を行う
@@ -39,14 +39,14 @@ const getBreadcrumbs = (pathname: string) => {
       if (index === 0) {
         const mapping = getPathNameMapping('/');
         return (
-          <Link href={mapping.path} underline="none" key={`${item}-${index}`}>
+          <Link className="breadcrumb-link" href={mapping.path} underline="none" key={`${item}-${index}`} color="white">
             {mapping.label}
           </Link>
         );
       } else {
         const mapping = getPathNameMapping(roots[index + 1]);
         return (
-          <Link href={roots[index + 1]} underline="none" key={`${item}-${index}`}>
+          <Link className="breadcrumb-link" href={roots[index + 1]} underline="none" key={`${item}-${index}`} color="white">
             {mapping.label}
           </Link>
         );
@@ -60,7 +60,7 @@ const CustomBreadcrumb = () => {
 
   return (
     <Breadcrumbs
-      separator={<NavigateNextIcon fontSize="small" color="inherit" />}
+      separator={<NavigateNextIcon fontSize="small" />}
       aria-label="breadcrumb"
       className="breadcrumb"
     >
