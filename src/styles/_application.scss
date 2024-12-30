@@ -98,3 +98,43 @@ footer {
     }
   }
 }
+
+/* エラーページ */
+.error-page-container {
+  height: 100vh;
+  background-color: #000;
+
+  .error-page-content-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .error-page-grid-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .error-page-primary-text {
+        font-size: 24px;
+        color: $main-bg-color;
+      }
+
+      .error-page-secondary-text {
+        color: $main-bg-color;
+      }
+
+      .error-page-monster-image {
+        max-width: 120px;
+      }
+
+    }
+
+    .error-page-back-top-button {
+      button {
+        border-color: $main-bg-color;
+        color: $main-bg-color;
+      }
+    }
+  }
+}

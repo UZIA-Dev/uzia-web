@@ -1,5 +1,5 @@
 import React from 'react';
-import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 
 type MastHeadImageProps = {
   src: string;
@@ -10,14 +10,14 @@ type MastHeadImageProps = {
 const MastHeadImage = (props: MastHeadImageProps) => {
   const { src, className, children } = props;
   return (
-    <Paper className={`masthead-container ${className}`}>
+    <Box className={`masthead-container ${className}`}>
       <img src={src} alt="masthead-image" />
       {!children ? null : (
         <div className="masthead-content-parent">
           {children}
         </div>
       )}
-    </Paper>
+    </Box>
   );
 }
 
