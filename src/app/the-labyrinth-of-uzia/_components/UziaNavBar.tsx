@@ -9,17 +9,18 @@ import _upperCase from 'lodash/upperCase';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import _map from 'lodash/map';
 import { MuiLinkForNextJs as Link } from "../../../components/MuiLinkForNextJs";
-import { usePathname } from "next/navigation";
+import { UziaPageRoute } from "../../../utils/pagePathMasterData";
 
 const MENU_NAME = ["news", "story", "world", "character", "gallery", "movie", "download", "system"];
 
 const UziaNavItems = () => {
-  const pathname = usePathname();
-
   return _map(MENU_NAME, (menuName, index) => {
+    const MANU_NAME = _upperCase(menuName);
+    // @ts-expect-error ignore
+    const path = UziaPageRoute[MANU_NAME];
     return (
       <Grid className="uzui-nav-bar-item-grid" key={`${menuName}-${index}`} size={{ xs: 6, sm: 3 }} textAlign="center" borderBottom="1px solid">
-        <Link href={`${pathname}/${menuName}`}>
+        <Link href={`${path}`}>
           <Button className="uzui-nav-bar-item-button" startIcon={<KeyboardDoubleArrowRightIcon />} color='inherit' sx={{ width: "100%" }}>
             <Typography variant='h4' component="span" fontWeight={300} fontSize={20}>{_upperCase(menuName)}</Typography>
           </Button>
