@@ -128,4 +128,26 @@ $uzui-nav-menu-white-text-color: #e0e0e0;
       }
     }
   }
+
+  .uzui-news-link-card-container {
+    background-color: $main-bg-color;
+    color: #000000;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    .uzui-news-link-card-action-area-button {
+      display: flex;
+
+      .uzui-news-link-card-image-container {
+        min-width: 180px;
+        max-width: 300px;
+      }
+
+      .uzui-news-link-card-content {
+        flex-grow: 1;
+      }
+    }
+  }
 }

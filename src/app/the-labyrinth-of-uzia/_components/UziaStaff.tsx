@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid2";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import ContainerTitle from './common/ContainerTitle';
-import StaffInfo from './staff/staff-info.json';
+import StaffInfo from '../../../../public/data/staff-info.json';
 
 type StaffItemType = {
   name: string;

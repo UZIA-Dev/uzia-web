@@ -6,7 +6,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import CampaignRoundedIcon from '@mui/icons-material/CampaignRounded';
-import DUMMY_DATA from './dummy-news-data.json';
+import DUMMY_DATA from '../../../../../public/data/dummy-news-data.json';
 
 type NewsItemTypes = {
   title: string;

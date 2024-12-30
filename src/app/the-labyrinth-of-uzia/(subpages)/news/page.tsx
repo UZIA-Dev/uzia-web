@@ -1,12 +1,13 @@
 import React from "react";
+import Container from "@mui/material/Container";
+import NewsList from "./_component/NewsList";
 
 
 const UziaNewsPage = () => {
   return (
-    <div>
-      {/* <h2>News</h2> */}
-      {/* News List */}
-    </div>
+    <Container maxWidth="md">
+      <NewsList />
+    </Container>
   );
 }
 
