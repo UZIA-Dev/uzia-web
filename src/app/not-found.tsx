@@ -17,7 +17,6 @@ export default function NotFound() {
   const _images = getRandomImage();
   const imageSource = getImage(_images);
 
-  console.log({ imageSource });
   return (
     <Container className="error-page-container" maxWidth="xl">
       <Box className="error-page-content-box">
