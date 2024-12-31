@@ -138,3 +138,27 @@ footer {
     }
   }
 }
+
+/* ニュースリスト */
+.news-link-card-container {
+  background-color: $main-bg-color;
+  color: #000000;
+  margin: 2rem 0;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .news-link-card-action-area-button {
+    display: flex;
+
+    .news-link-card-image-container {
+      min-width: 180px;
+      max-width: 300px;
+    }
+
+    .news-link-card-content {
+      flex-grow: 1;
+    }
+  }
+}

@@ -10,6 +10,7 @@ import LogoIcon from './parts/LogoIcon';
 import Slide from '@mui/material/Slide';
 import MobileAppBarMenuBox from './parts/MobileAppBarMenuBox';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
+import { PageRoute } from '@/utils/pagePathMasterData';
 
 const pages = ['NEWS', 'ABOUT', 'PRODUCTS', 'BLOG', 'CONTACT'];
 
@@ -62,15 +63,20 @@ function CustomAppBar(props: React.Attributes) {
               isMenuOpen={Boolean(anchorElNav)}
             />
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "flex-end" }}>
-              {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
-                >
-                  {page}
-                </Button>
-              ))}
+              {pages.map((page) => {
+                // @ts-expect-error ignore
+                const pagePath = PageRoute[page]
+                return (
+                  <Button
+                    href={pagePath}
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: 'white', display: 'block' }}
+                  >
+                    {page}
+                  </Button>
+                );
+              })}
             </Box>
           </Toolbar>
         </Container>

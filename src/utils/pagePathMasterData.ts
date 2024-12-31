@@ -4,6 +4,7 @@
 export enum PageRoute {
   TOP = "/",
   NEWS = "/news",
+  ABOUT = "/about",
   NEWS_DETAIL = "/news/[id]",
   PRODUCTS = "/products",
   BLOG = "/blog",
@@ -29,10 +30,11 @@ export enum UziaPageRoute {
 export const pageNameMap = {
   [PageRoute.TOP]: "トップ",
   [PageRoute.NEWS]: "ニュース一覧",
-  [PageRoute.NEWS_DETAIL]: "新規登録",
-  [PageRoute.PRODUCTS]: "詳細",
-  [PageRoute.BLOG]: "詳細",
-  [PageRoute.CONTACT]: "詳細",
+  [PageRoute.ABOUT]: "UZIAについて",
+  [PageRoute.NEWS_DETAIL]: "ニュース",
+  [PageRoute.PRODUCTS]: "プロダクト",
+  [PageRoute.BLOG]: "ブログ",
+  [PageRoute.CONTACT]: "コンタクト",
 
   [UziaPageRoute.TOP]: "ユーザイアの迷宮",
   [UziaPageRoute.NEWS]: "ニュース一覧",
