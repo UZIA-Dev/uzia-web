@@ -32,13 +32,13 @@ const NewsListCard = (props: NewsListCardProps) => {
             />
           </div>
           <CardContent className="news-link-card-content">
-            <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+            <Typography className="news-link-card-date" variant="caption" sx={{ color: 'text.secondary' }}>
               {date}
             </Typography>
-            <Typography variant="h5" component="div" color="textPrimary">
+            <Typography className="news-link-card-title" variant="h5" component="div" color="textPrimary">
               {title}
             </Typography>
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+            <Typography className="news-link-card-description" variant="body2" sx={{ color: 'text.secondary' }}>
               {description}
             </Typography>
           </CardContent>

@@ -5,6 +5,19 @@ $container-title-font-size: 46;
 
 $common-footer-bg-color: #f4f4f4;
 
+/* default breakpoint */
+// xs, extra-small: 0px
+// sm, small: 600px
+// md, medium: 900px
+// lg, large: 1200px
+// xl, extra-large: 1536px
+$breakpoint-xs: 0px;
+$breakpoint-sm: 600px;
+$breakpoint-md: 900px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1536px;
+
+
 @mixin container-title {
   font-size: $container-title-font-size;
   font-weight: 400;

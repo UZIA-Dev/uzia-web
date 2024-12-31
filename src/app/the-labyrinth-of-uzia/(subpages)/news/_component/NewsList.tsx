@@ -35,10 +35,10 @@ const NewsListCard = (props: NewsListCardProps) => {
             <Typography variant="caption" sx={{ color: 'text.secondary' }}>
               {date}
             </Typography>
-            <Typography variant="h5" component="div" color="textPrimary">
+            <Typography className="uzui-news-link-card-title" variant="h5" component="div" color="textPrimary">
               {title}
             </Typography>
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+            <Typography className="uzui-news-link-card-description" variant="body2" sx={{ color: 'text.secondary' }}>
               {description}
             </Typography>
           </CardContent>

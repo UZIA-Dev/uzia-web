@@ -3,6 +3,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: $main-bg-color;
 }
 
 /* AppBar */
@@ -153,12 +154,37 @@ footer {
     display: flex;
 
     .news-link-card-image-container {
-      min-width: 180px;
+      min-width: 100px;
       max-width: 300px;
+
+      @media (max-width: $breakpoint-md) {
+        max-width: 200px;
+      }
     }
 
     .news-link-card-content {
       flex-grow: 1;
+      min-width: 400px;
+
+      @media (max-width: $breakpoint-sm) {
+        min-width: 200px;
+      }
+
+      .news-link-card-title {
+        font-size: x-large;
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: medium;
+        }
+      }
+
+      .news-link-card-description {
+        font-size: medium;
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: small;
+        }
+      }
     }
   }
 }

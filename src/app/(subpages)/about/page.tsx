@@ -1,13 +1,11 @@
 import React from "react";
 import Container from "@mui/material/Container";
-import NewsList from "./_component/NewsList";
 
-const News = () => {
+const About = () => {
   return (
     <Container maxWidth="md">
-      <NewsList />
     </Container>
   );
 }
 
-export default News;
+export default About;
